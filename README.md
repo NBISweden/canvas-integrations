@@ -25,3 +25,6 @@ Finally, to create the page with the html file run the following command, replac
 ```bash
 curl -X POST --header 'Authorization: Bearer <personal_token>' https://uppsala.instructure.com/api/v1/courses/<course_number>/pages -d wiki_page[title]=<page_title> -d wiki_page[body]="$(cat <output_file>.html)"
 ```
+
+## Additional libraries
+https://github.com/ucfopen/canvasapi
