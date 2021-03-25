@@ -27,4 +27,5 @@ curl -X POST --header 'Authorization: Bearer <personal_token>' https://uppsala.i
 ```
 
 ## Additional libraries
-https://github.com/ucfopen/canvasapi
+- https://github.com/ucfopen/canvasapi
+- https://github.com/gqmaguirejr/Canvas-tools
