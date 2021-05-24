@@ -20,8 +20,8 @@ docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex <inpu
 The Canvas LMS provides an [API](https://canvas.instructure.com/doc/api/), which can be used for creating/updating/deleting pages (and much more). To create a page with the html file produced in the previous step, a personal token needs to be created in the Canvas UI. Detailed instructions for creating a personal token can be found [here](https://canvas.instructure.com/doc/api/file.oauth.html#manual-token-generation).
 
 In summary:
-*  Click the "profile" link in the top right menu bar, or navigate to /profile
-* Under the "Approved Integrations" section, click the button to generate a new access token.
+* Click the "profile" link in the top right menu bar, or navigate to /profile
+* In the profile "Settings" under the "Approved Integrations" section, click the button to generate a new access token.
 * Once the token is generated, you cannot view it again, and you'll have to generate a new token if you forget it. Remember that access tokens are password equivalent, so keep it secret.
 
 
