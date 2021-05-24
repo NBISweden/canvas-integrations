@@ -4,7 +4,6 @@ This repository is used as the code base for all the functionality related to th
 
 https://github.com/learn-co-curriculum/github-to-canvas/
 
-
 ## Moving Markdown files to Canvas
 The method below was put together by us in NBIS.
 
@@ -24,12 +23,24 @@ In summary:
 * In the profile "Settings" under the "Approved Integrations" section, click the button to generate a new access token.
 * Once the token is generated, you cannot view it again, and you'll have to generate a new token if you forget it. Remember that access tokens are password equivalent, so keep it secret.
 
-
 ### Create a Canvas page using the API
 Finally, to create the page with the html file run the following command, replacing the `personal_token` with the one created in the previous step:
 
 ```bash
-curl -X POST --header 'Authorization: Bearer <personal_token>' https://uppsala.instructure.com/api/v1/courses/<course_number>/pages -d wiki_page[title]=<page_title> -d wiki_page[body]="$(cat <output_file>.html)"
+curl -X POST --header 'Authorization: Bearer <personal_token>' \
+    https://uppsala.instructure.com/api/v1/courses/<course_number>/pages \
+    -d wiki_page[title]=<page_title> \
+    -d wiki_page[body]="$(cat <output_file>.html)"
+```
+
+If you then want to update the same page you will have to use a slightly
+modified command using `PUT` instead of `POST` that only updated the body of the
+specified page (notice the exact specification of the page in the URL):
+
+```bash
+curl -X PUT --header 'Authorization: Bearer <personal_token>' \
+    https://uppsala.instructure.com/api/v1/courses/<course_number>/pages/<page_title> \
+    -d wiki_page[body]="$(cat <output_file>.html)"
 ```
 
 ## Additional libraries
