@@ -1,6 +1,12 @@
 This repository is used as the code base for all the functionality related to the transition to the Canvas LMS.
 
+## Automated transition and syncing of content from GitHub to Canvas
+
+https://github.com/learn-co-curriculum/github-to-canvas/
+
+
 ## Moving Markdown files to Canvas
+The method below was put together by us in NBIS.
 
 ### Transform Markdown to html
 
