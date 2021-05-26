@@ -34,8 +34,8 @@ replacing the `personal_token` with the one created in the previous step:
 ```bash
 curl -X POST --header 'Authorization: Bearer <personal_token>' \
     https://uppsala.instructure.com/api/v1/courses/<course_number>/pages \
-    -d wiki_page[title]=<page_title> \
-    -d wiki_page[body]="$(cat <output_file>.html)"
+    --data-urlencode wiki_page[title]=<page_title> \
+    --data-urlencode wiki_page[body]="$(cat <output_file>.html)"
 ```
 
 If you then want to update the same page you will have to use a slightly
@@ -45,12 +45,8 @@ specified page (notice the exact specification of the page in the URL):
 ```bash
 curl -X PUT --header 'Authorization: Bearer <personal_token>' \
     https://uppsala.instructure.com/api/v1/courses/<course_number>/pages/<page_title> \
-    -d wiki_page[body]="$(cat <output_file>.html)"
+    --data-urlencode wiki_page[body]="$(cat <output_file>.html)"
 ```
-
-If you're seeing truncated output, check if you have any `>` or `<` characters
-inside code chunks, inline code or quotes (single or double) - this breaks
-everything, for some reason.
 
 ## Additional libraries
 - https://github.com/ucfopen/canvasapi
