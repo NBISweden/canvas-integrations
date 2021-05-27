@@ -17,6 +17,8 @@ The following command will mount the current folder in the `pandoc` container an
 docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex <input_file.md> -o <output_file.html>
 ```
 
+Trouble with embedding images / page width? [Check the code from the Tools for Rep. Research](https://github.com/NBISweden/workshop-reproducible-research/blob/canvas/pages/upload-page-to-canvas.sh).
+
 ### Create personal token for Canvas API
 
 The Canvas LMS provides an [API](https://canvas.instructure.com/doc/api/), which can be used for creating/updating/deleting pages (and much more). To create a page with the html file produced in the previous step, a personal token needs to be created in the Canvas UI. Detailed instructions for creating a personal token can be found [here](https://canvas.instructure.com/doc/api/file.oauth.html#manual-token-generation).
