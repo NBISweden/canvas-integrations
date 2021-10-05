@@ -1,0 +1,3 @@
+- name: NBIS Carpentries
+  css: nbis_carpentries/nbis_carpentries.scss
+  js: nbis_carpentries/nbis_carpentries.js

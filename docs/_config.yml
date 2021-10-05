@@ -2,7 +2,13 @@ title: NBIS Theme for Studium
 collections:
   examples:
     output: true
-    permalink: examples/:path:output_ext
+defaults:
+  - scope:
+      type: examples
+      path: ""
+    values:
+      permalink: examples/:path:output_ext
+      root: ..
 liquid:
   error_mode: strict
 exclude:

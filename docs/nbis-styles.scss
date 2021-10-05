@@ -1,7 +1,7 @@
 ---
 ---
-{%- for style in site.static_files -%}
-    {%- if style.path contains 'css/' -%}
-        {%- include_relative css/{{style.name}} -%}
-    {%- endif -%}
+{%- for component in site.data.components -%}
+    {% if component.css != nil %}
+        {%- include {{component.css}} -%}
+    {% endif %}
 {%- endfor -%}

@@ -1,8 +1,7 @@
 ---
 ---
-
-{%- for script in site.static_files -%}
-    {%- if script.path contains 'js/' -%}
-        {%- include_relative js/{{script.name}} -%}
-    {%- endif -%}
+{%- for component in site.data.components -%}
+    {% if component.js != nil %}
+        {%- include {{component.js}} -%}
+    {% endif %}
 {%- endfor -%}
