@@ -1,0 +1,7 @@
+---
+---
+{%- for style in site.static_files -%}
+    {%- if style.path contains 'css/' -%}
+        {%- include_relative css/{{style.name}} -%}
+    {%- endif -%}
+{%- endfor -%}

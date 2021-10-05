@@ -1,0 +1,10 @@
+title: NBIS Theme for Studium
+collections:
+  examples:
+    output: true
+    permalink: examples/:path:output_ext
+liquid:
+  error_mode: strict
+exclude:
+  - Gemfile
+  - Gemfile.lock
