@@ -1,6 +1,9 @@
 /**
- * Enables the Carpentries styling for elements contained within an element
- * with nbis_carpentries in its class attribute
+ * Enables the Carpentries styling for elements contained within an element with nbis_carpentries
+ * in its class attribute
+ *
+ * The classes and variables have to a large extent been copied from the Carpentries style
+ * and namespaced by nesting them under .nbis_carpentries
  */
 
 @font-face {

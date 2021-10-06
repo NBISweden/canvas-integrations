@@ -1,6 +1,10 @@
 /**
- * Enables toggle functionality for Carentries style solution blocks contained 
- * within an element with nbis_carpentries in its class attribute
+ * Enables toggle functionality for Carentries style solution blocks contained  within
+ * an element with nbis_carpentries in its class attribute.
+ *
+ * The script observes mutation events orginiation from the #content-wrapper that result 
+ * in new elements being added and at the same time contains .nbis_carpentries .solution
+ * 
  */
 
 (function() {
@@ -67,6 +71,6 @@
         }
     }
 
-    waitForCanvasPageRender("content-wrapper");
+    waitForCanvasPageRender('content-wrapper');
 
 })();

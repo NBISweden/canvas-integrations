@@ -1,3 +1,8 @@
+# A list that describes each component that should be included in the NBIS Theme
+# with the keys
+# name – mandatory – Human readable name for the component
+# js – optional – path to a .js file relative to _includes
+# css – optional – path to a .css / scss file relative to _includes
 - name: NBIS Carpentries
   css: nbis_carpentries/nbis_carpentries.scss
   js: nbis_carpentries/nbis_carpentries.js
