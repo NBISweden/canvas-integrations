@@ -53,7 +53,7 @@
                 if (mutation.addedNodes && mutation.addedNodes.length > 0) {
                     mutation.addedNodes.forEach(function(el) {
                         if(el.querySelectorAll) {
-                            el.querySelectorAll(".nbis_carpentries .solution").forEach(toggleSolutionBlock)
+                            el.querySelectorAll('.nbis_carpentries .solution').forEach(toggleSolutionBlock)
                         }
                     });
                 }
@@ -71,6 +71,7 @@
         }
     }
 
+    document.querySelectorAll('.nbis_carpentries .solution').forEach(toggleSolutionBlock);
     waitForCanvasPageRender('content-wrapper');
 
 })();
