@@ -49,4 +49,69 @@ Version and edition management will help to:
 > {: .solution}
 {: .discussion}
 
+> ## Exercise: Start a data dictionary
+>
+> The file [samples_metadata_lesson.csv](../files/samples_metadata_lesson.csv) contains information about a set of samples for a research project. In this exercise you will start writing a data dictionary for this file.
+> 1. Open the `samples_metadata_lesson.csv` file in a spreadsheet program of you choice (Microsoft Excel, LibreOffice Calc, or Google Spreadsheet, or other).
+> 2. Open another **empty** spreadsheet file, name it `data_dictionary`.
+> 3. Add the following headings to the `data_dictionary` file:
+> **Current variable name**, **ENA Variable name**, **Measurement unit**, **Allowed values**, **Definition**, **Description**
+>
+> 4. Copy the headings of the **FILE file** to the first column (Current variable name) of the `data_dictionary` file, _**one heading term per row**_.
+>   * Now you should have a first row with the headings under step 3, and then one term (from the FILE file headings) per row in the first column.
+> 5. Try adding definitions (to the Definition column) for some of the terms.
+> 6. Are there any terms where you can specify information in the Measurement unit?
+>
+> > ## Solution
+> >
+> > The beginning of the data dictionary could now look something like this:
+> >
+> > | Current variable name | ENA Variable name | Measurement unit | Allowed values | Definition | Description |
+> > |-|-|-|-|-|-|
+> > | sample id |  |  |  |  |  |
+> > | patient id |  |  |  |  |  |
+> > | sex |  |  | male, female, unknown | Sex of the individual |  |
+> > | date |  |  | format: YYYY-MM-DD, >=proj_start_date & <=today | Date of sampling |  |
+> > | location |  |  |  |  |  |
+> > | age |  | years |  | Age of individual at the time of sampling |  |
+> > | health state |  |  |  | Health state of individual at time of sampling |  |
+> > | symptoms |  |  | fever, sore throat, fatigue, loss of taste, not applicable | Symptoms experienced in connection with illness |  |
+> > | disease outcome |  |  | healthy, dead | Final outcome of disease |  |
+> > | tissue |  |  |  | Tissue sampled |  |
+> >
+> {: .solution}
+{: .challenge}
+
+~~~
+str(samples)
+~~~
+{: .language-r}
+
+
+
+~~~
+spec_tbl_df [29 × 8] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ patient_id     : chr [1:29] "OAS-29_1" "OAS-29_10" "OAS-29_11" "OAS-29_12" ...
+ $ collection_date: Date[1:29], format: "2020-03-31" "2020-03-31" ...
+ $ country        : chr [1:29] "Italy" "Italy" "Italy" "Italy" ...
+ $ region         : chr [1:29] "Turin" "Turin" "Turin" "Turin" ...
+ $ age            : num [1:29] 48 35 59 60 83 21 44 55 81 63 ...
+ $ disease_outcome: chr [1:29] "dead" NA "recovered" "recovered" ...
+ $ sex            : chr [1:29] "female" "male" "male" "female" ...
+ $ ct             : num [1:29] 41.5 15.3 25.3 27 25.3 ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   patient_id = col_character(),
+  ..   collection_date = col_date(format = ""),
+  ..   country = col_character(),
+  ..   region = col_character(),
+  ..   age = col_double(),
+  ..   disease_outcome = col_character(),
+  ..   sex = col_character(),
+  ..   ct = col_double()
+  .. )
+ - attr(*, "problems")=<externalptr> 
+~~~
+{: .output}
+
 </article>
